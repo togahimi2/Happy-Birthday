@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Trần Thùy Anh!</title>
+    <title>Happy Birthday!</title>
     <style>
         body {
             margin: 0;
@@ -23,4 +23,52 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-widt
+            max-width: 600px;
+            color: #004466;
+        }
+        .card h1 {
+            color: #0077cc;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            opacity: 0.8;
+            animation: fall 4s infinite ease-in-out;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+            }
+            100% {
+                transform: translateY(100vh) translateX(20vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Birthday, Trần Thùy Anh!</h1>
+        <p>Hello đằng ấy nha, thì mình cũng đi với nhau cũng gần 4 năm rồi á...</p>
+    </div>
+
+    <!-- Confetti -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>
